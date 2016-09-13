@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'//应用插件
+
+android {
+    signingConfigs {
+    }
+    compileSdkVersion 23//编译时用到的Sdk 版本
+    buildToolsVersion "23.0.3" //构建时用到的Sdk 版本
+    defaultConfig {
+        applicationId "com.zzl.mmm"
+        minSdkVersion 19
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+        generatedDensities = ['hdpi','xhdpi']
+    }
+//    aaptOptions {
+//        additionalParameters "--no-version-vectors"
+//    }
+    buildTypes {//混淆设置
+        release {
+            minifyEnabled false//发布时是否使项目的体积变小（就是是否混淆，true为开启混淆）
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //混淆器路径
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'org.xutils:xutils:3.3.36'
+    compile 'com.huxq17.xrefreshview:xrefreshview:3.4.0'
+
+    //依赖下面的库
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'com.android.support:cardview-v7:23.4.0'
+
+    //NoHttp
+    compile files('src/main/libs/nohttp1.0.4.jar')
+
+    //svg
+    compile 'com.github.japgolly.android:svg-android:2.0.6'
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+
+    //友盟
+    //compile project(':PushSDK')
+
+    //swipeMune  minsdk=19
+    compile 'com.brioal:SwipeMenu:1.0'
+
+
+    //banner图片轮播
+    compile 'com.youth.banner:banner:+' //最新版本
+}

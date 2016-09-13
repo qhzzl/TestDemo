@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SVGActivity">
+
+
+    <com.youth.banner.Banner
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="360px"
+        app:default_image="@mipmap/ic_launcher"
+        app:is_auto_play="true"
+        app:indicator_margin="50px"
+        app:indicator_height="16px"
+        app:indicator_width="16px"
+        />
+    <!--app:title_background="标题栏的背景色"
+        app:title_height="标题栏高度"
+        app:title_textcolor="标题字体颜色"
+        app:title_textsize="标题字体大小"-->
+
+    <ImageView
+        android:id="@+id/svg_img"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:src="@drawable/back"/>
+
+</LinearLayout>

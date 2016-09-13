@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100px"
+        android:src="@mipmap/ic_launcher"/>
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100px"
+        android:text=""
+        android:hint="手机号"
+        android:inputType="phone"/>
+    <EditText
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50px"
+        android:hint="密　码"
+        android:inputType="textPassword"
+        android:id="@+id/pwd" />
+
+    <Button
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:text="登　录"
+        android:textColor="#ffffff"
+        android:background="#226796"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100px"
+        android:textSize="36px"
+        android:id="@+id/login"/>
+    <android.support.v7.widget.SwitchCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10px"/>
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
